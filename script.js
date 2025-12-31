@@ -1,3 +1,15 @@
+// Mock product data (replace with API call)
+const mockProducts = [
+    { id: 1, name: 'Cabernet Sauvignon 2020', price: 24.99, emoji: '🍷', rating: 128, stars: 5 },
+    { id: 2, name: 'Sauvignon Blanc 2021', price: 18.99, emoji: '🥂', rating: 95, stars: 4 },
+    { id: 3, name: 'Champagne Brut Prestige', price: 35.99, emoji: '🍾', rating: 212, stars: 5 },
+    { id: 4, name: 'Single Malt Whiskey', price: 49.99, emoji: '🥃', rating: 178, stars: 5 },
+    { id: 5, name: 'Craft IPA Bundle', price: 29.99, emoji: '🍺', rating: 76, stars: 4 },
+    { id: 6, name: 'Premium Rum Selection', price: 39.99, emoji: '🍹', rating: 143, stars: 5 },
+    { id: 7, name: 'Pinot Noir Reserve', price: 32.99, emoji: '🍷', rating: 189, stars: 5 },
+    { id: 8, name: 'Riesling Collection', price: 21.99, emoji: '🥂', rating: 87, stars: 4 }
+];
+
 // Initialize Swiper Carousel
 const swiper = new Swiper('.hero-swiper', {
     loop: true,
@@ -27,8 +39,57 @@ const swiper = new Swiper('.hero-swiper', {
     }
 });
 
-// Add to Cart Button Functionality
-document.addEventListener('DOMContentLoaded', function() {
+// Fetch and render products from API
+async function loadProducts() {
+    const productsGrid = document.getElementById('productsGrid');
+    
+    try {
+        // Option 1: Fetch from API endpoint
+        // const response = await axios.get('/api/products');
+        // const products = response.data;
+        
+        // Option 2: Use mock data (for demo/testing)
+        const products = mockProducts;
+        
+        // Clear loading spinner
+        productsGrid.innerHTML = '';
+        
+        // Render products
+        products.forEach(product => {
+            const productCard = createProductCard(product);
+            productsGrid.appendChild(productCard);
+        });
+        
+        // Attach event listeners to new buttons
+        attachProductEventListeners();
+        
+        console.log('✓ Loaded ' + products.length + ' products');
+    } catch (error) {
+        console.error('Error loading products:', error);
+        productsGrid.innerHTML = '<div class="error-message">Failed to load products. Please try again.</div>';
+    }
+}
+
+// Create product card DOM element
+function createProductCard(product) {
+    const card = document.createElement('div');
+    card.className = 'product-card';
+    
+    const stars = '⭐'.repeat(product.stars);
+    
+    card.innerHTML = `
+        <div class="product-image">${product.emoji}</div>
+        <h4>${product.name}</h4>
+        <p class="product-price">$${product.price.toFixed(2)}</p>
+        <div class="product-rating">${stars} (${product.rating} reviews)</div>
+        <button class="add-to-cart" data-product-id="${product.id}">Add to Cart</button>
+    `;
+    
+    return card;
+}
+
+// Attach event listeners to dynamically created buttons
+function attachProductEventListeners() {
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
     
     addToCartButtons.forEach(button => {
@@ -36,13 +97,17 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             const productCard = this.closest('.product-card');
             const productName = productCard.querySelector('h4').textContent;
+            const productId = this.getAttribute('data-product-id');
             
-            // Show a simple notification
+            // Show notification
             showNotification(`${productName} added to cart!`);
             
             // Visual feedback
             this.textContent = '✓ Added!';
             this.style.background = '#4CAF50';
+            
+            // Store in localStorage
+            addToLocalCart(productId);
             
             setTimeout(() => {
                 this.textContent = 'Add to Cart';
@@ -50,6 +115,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 2000);
         });
     });
+}
+
+// Add to Cart Button Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Load products on page load
+    loadProducts();
     
     // Newsletter subscription
     const newsletterBtn = document.querySelector('.newsletter-btn');
@@ -71,7 +142,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const cartBtn = document.querySelector('.cart-btn');
     if (cartBtn) {
         cartBtn.addEventListener('click', function() {
-            showNotification('Cart feature coming soon!');
+            const cartCount = getCartCount();
+            showNotification(`You have ${cartCount} item(s) in your cart`);
         });
     }
     
@@ -132,6 +204,18 @@ function showNotification(message, type = 'success') {
     }, 3000);
 }
 
+// Cart management with localStorage
+function addToLocalCart(productId) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push(productId);
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+function getCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    return cart.length;
+}
+
 // Add animations to stylesheet
 const style = document.createElement('style');
 style.textContent = `
@@ -156,6 +240,22 @@ style.textContent = `
             opacity: 0;
         }
     }
+    
+    .loading-spinner {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding: 40px;
+        color: #999;
+        font-size: 1.1rem;
+    }
+    
+    .error-message {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding: 40px;
+        color: #f44336;
+        font-size: 1.1rem;
+    }
 `;
 document.head.appendChild(style);
 
@@ -173,7 +273,44 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Mobile menu toggle (optional, for future enhancement)
+// API Integration Example
+// To connect to a real backend, update loadProducts() like this:
+/*
+async function loadProducts() {
+    try {
+        const response = await axios.get('https://your-api.com/products');
+        const products = response.data;
+        
+        const productsGrid = document.getElementById('productsGrid');
+        productsGrid.innerHTML = '';
+        
+        products.forEach(product => {
+            const productCard = createProductCard(product);
+            productsGrid.appendChild(productCard);
+        });
+        
+        attachProductEventListeners();
+    } catch (error) {
+        console.error('API Error:', error);
+    }
+}
+*/
+
+// Smooth scroll behavior for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
 console.log('✓ TotalWine Clone initialized successfully!');
 console.log('✓ Swiper carousel active with 4-second autoplay');
+console.log('✓ Dynamic product loading enabled with Axios');
 console.log('✓ All interactive elements ready');

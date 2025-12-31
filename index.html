@@ -125,67 +125,13 @@
         </div>
     </section>
 
-    <!-- Product Deals Grid: 4-column responsive -->
+    <!-- Product Deals Grid: 4-column responsive (Dynamically loaded via API) -->
     <section class="deals">
         <div class="container">
             <h3>Featured Products</h3>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image">🍷</div>
-                    <h4>Cabernet Sauvignon 2020</h4>
-                    <p class="product-price">$24.99</p>
-                    <div class="product-rating">⭐⭐⭐⭐⭐ (128 reviews)</div>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">🥂</div>
-                    <h4>Sauvignon Blanc 2021</h4>
-                    <p class="product-price">$18.99</p>
-                    <div class="product-rating">⭐⭐⭐⭐ (95 reviews)</div>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">🍾</div>
-                    <h4>Champagne Brut Prestige</h4>
-                    <p class="product-price">$35.99</p>
-                    <div class="product-rating">⭐⭐⭐⭐⭐ (212 reviews)</div>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">🥃</div>
-                    <h4>Single Malt Whiskey</h4>
-                    <p class="product-price">$49.99</p>
-                    <div class="product-rating">⭐⭐⭐⭐⭐ (178 reviews)</div>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">🍺</div>
-                    <h4>Craft IPA Bundle</h4>
-                    <p class="product-price">$29.99</p>
-                    <div class="product-rating">⭐⭐⭐⭐ (76 reviews)</div>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">🍹</div>
-                    <h4>Premium Rum Selection</h4>
-                    <p class="product-price">$39.99</p>
-                    <div class="product-rating">⭐⭐⭐⭐⭐ (143 reviews)</div>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">🍷</div>
-                    <h4>Pinot Noir Reserve</h4>
-                    <p class="product-price">$32.99</p>
-                    <div class="product-rating">⭐⭐⭐⭐⭐ (189 reviews)</div>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">🥂</div>
-                    <h4>Riesling Collection</h4>
-                    <p class="product-price">$21.99</p>
-                    <div class="product-rating">⭐⭐⭐⭐ (87 reviews)</div>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here dynamically -->
+                <div class="loading-spinner">Loading products...</div>
             </div>
         </div>
     </section>
@@ -229,6 +175,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
