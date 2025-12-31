@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TotalWine Clone - Your Wine Destination</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header: Logo left, nav center, cart/search right -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="/" class="logo">🍷 TotalWine.com</a>
+            <nav class="nav-menu">
+                <a href="#" class="nav-link">Wine</a>
+                <a href="#" class="nav-link">Beer</a>
+                <a href="#" class="nav-link">Spirits</a>
+                <a href="#" class="nav-link">Gifts</a>
+            </nav>
+            <div class="search-cart">
+                <input type="text" placeholder="Search wines..." class="search-input">
+                <button class="cart-btn">🛒 Cart</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Carousel: Full-width, autoplay 4s, 5 slides with CTAs -->
+    <section class="hero-carousel">
+        <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slide-content" style="background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);">
+                        <h2>Premium Red Wine Sale</h2>
+                        <p>Up to 40% off on cabernet sauvignon</p>
+                        <button class="cta-btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-content" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);">
+                        <h2>White Wine Specials</h2>
+                        <p>Discover crisp chardonnay & sauvignon blanc</p>
+                        <button class="cta-btn">Explore</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-content" style="background: linear-gradient(135deg, #4B0082 0%, #8B008B 100%);">
+                        <h2>Exclusive Spirits Collection</h2>
+                        <p>Rare whiskeys, vodkas & premium selections</p>
+                        <button class="cta-btn">View Collection</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-content" style="background: linear-gradient(135deg, #228B22 0%, #32CD32 100%);">
+                        <h2>Craft Beer Festival</h2>
+                        <p>Limited edition brews from around the world</p>
+                        <button class="cta-btn">Browse Beers</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-content" style="background: linear-gradient(135deg, #8B0000 0%, #DC143C 100%);">
+                        <h2>Holiday Gift Sets</h2>
+                        <p>Curated bundles perfect for every occasion</p>
+                        <button class="cta-btn">Shop Gifts</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- Deals Near You Section -->
+    <section class="promo-bar">
+        <div class="container">
+            <h3>🎉 Deals Near You</h3>
+            <div class="deals-grid">
+                <div class="deal-card">
+                    <h4>Summer Savings</h4>
+                    <p>Save on rosé wines</p>
+                </div>
+                <div class="deal-card">
+                    <h4>Members Only</h4>
+                    <p>Exclusive discounts</p>
+                </div>
+                <div class="deal-card">
+                    <h4>Flash Sales</h4>
+                    <p>Limited time offers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Grid: 6 icons -->
+    <section class="categories">
+        <div class="container">
+            <h3>Shop by Category</h3>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">🍷</div>
+                    <h4>Red Wine</h4>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🥂</div>
+                    <h4>White Wine</h4>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🍾</div>
+                    <h4>Champagne</h4>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🥃</div>
+                    <h4>Whiskey</h4>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🍺</div>
+                    <h4>Beer</h4>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🍹</div>
+                    <h4>Spirits</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Deals Grid: 4-column responsive -->
+    <section class="deals">
+        <div class="container">
+            <h3>Featured Products</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">🍷</div>
+                    <h4>Cabernet Sauvignon 2020</h4>
+                    <p class="product-price">$24.99</p>
+                    <div class="product-rating">⭐⭐⭐⭐⭐ (128 reviews)</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🥂</div>
+                    <h4>Sauvignon Blanc 2021</h4>
+                    <p class="product-price">$18.99</p>
+                    <div class="product-rating">⭐⭐⭐⭐ (95 reviews)</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🍾</div>
+                    <h4>Champagne Brut Prestige</h4>
+                    <p class="product-price">$35.99</p>
+                    <div class="product-rating">⭐⭐⭐⭐⭐ (212 reviews)</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🥃</div>
+                    <h4>Single Malt Whiskey</h4>
+                    <p class="product-price">$49.99</p>
+                    <div class="product-rating">⭐⭐⭐⭐⭐ (178 reviews)</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🍺</div>
+                    <h4>Craft IPA Bundle</h4>
+                    <p class="product-price">$29.99</p>
+                    <div class="product-rating">⭐⭐⭐⭐ (76 reviews)</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🍹</div>
+                    <h4>Premium Rum Selection</h4>
+                    <p class="product-price">$39.99</p>
+                    <div class="product-rating">⭐⭐⭐⭐⭐ (143 reviews)</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🍷</div>
+                    <h4>Pinot Noir Reserve</h4>
+                    <p class="product-price">$32.99</p>
+                    <div class="product-rating">⭐⭐⭐⭐⭐ (189 reviews)</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🥂</div>
+                    <h4>Riesling Collection</h4>
+                    <p class="product-price">$21.99</p>
+                    <div class="product-rating">⭐⭐⭐⭐ (87 reviews)</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section newsletter">
+                <h4>Newsletter</h4>
+                <p>Subscribe for exclusive deals</p>
+                <input type="email" placeholder="Your email" class="newsletter-input">
+                <button class="newsletter-btn">Subscribe</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TotalWine Clone. All rights reserved. | Age Gate: Must be 21+ to purchase</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
