@@ -26,6 +26,8 @@ When you run your site locally on your computer, it's only accessible to you at:
 If you ran:
 ```bash
 python -m http.server 8000
+# Or for Python 2.x:
+# python -m SimpleHTTPServer 8000
 ```
 **Your link is:** `http://localhost:8000`
 
@@ -81,6 +83,11 @@ To get a public link that anyone can visit, you need to deploy your site. Here's
 #### Step 2: Find Your Link
 **After 2-3 minutes, your site will be live at:**
 ```
+https://[your-username].github.io/[repository-name]
+```
+
+**For this repository specifically:**
+```
 https://ilovechanel.github.io/wholesale_wine
 ```
 
@@ -88,7 +95,7 @@ https://ilovechanel.github.io/wholesale_wine
 1. Go to GitHub repository: `https://github.com/IloveChanel/wholesale_wine`
 2. Click **Settings** → **Pages**
 3. Your link will be displayed at the top in a green box:
-   > "Your site is live at https://ilovechanel.github.io/wholesale_wine"
+   > "Your site is live at https://[your-username].github.io/[repository-name]"
 
 ---
 
@@ -116,6 +123,8 @@ Follow the prompts:
 ```
 
 **This is your live link!** Copy and save it.
+
+**Note:** Vercel generates unique URLs for each deployment. Your actual URL will be different but follow a similar pattern with your project name.
 
 #### How to Find It Again:
 1. **In Terminal:**
@@ -232,7 +241,11 @@ Want a custom domain like `www.yourwineshop.com`?
 ## ❓ Frequently Asked Questions
 
 ### Q: "I deployed but my link doesn't work!"
-**A:** Wait 2-5 minutes after deployment. DNS changes take time. Clear your browser cache and try again.
+**A:** 
+- **For new deployments**: Wait 2-5 minutes for the deployment to complete and propagate.
+- **For custom domains**: DNS changes can take 24-48 hours to propagate globally.
+- Clear your browser cache and try again.
+- Check your deployment platform's dashboard for any errors.
 
 ### Q: "My localhost link doesn't work!"
 **A:** Make sure your server is running. You should see a message like "Server running on port 8000". If not, restart the server.
