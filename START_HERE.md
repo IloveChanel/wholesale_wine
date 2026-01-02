@@ -6,6 +6,21 @@ Your TotalWine.com clone is **100% finished** and ready to use immediately!
 
 ---
 
+## 🔗 LOOKING FOR YOUR LINK?
+
+**👉 See [HOW_TO_ACCESS.md](HOW_TO_ACCESS.md) for complete instructions on finding:**
+- Your **local development link** (localhost)
+- Your **GitHub repository link**
+- Your **deployed website link** (GitHub Pages, Vercel, Netlify)
+- How to **share your site** with others
+
+**Quick Reference:**
+- **Testing locally?** → `http://localhost:8000`
+- **View code?** → `https://github.com/IloveChanel/wholesale_wine`
+- **Share with others?** → Deploy first (see HOW_TO_ACCESS.md)
+
+---
+
 ## 🎯 What You Have
 
 A **complete, professional e-commerce website** with:
@@ -100,6 +115,7 @@ After opening in browser, you'll see:
 
 | Document | Purpose | Read Time |
 |----------|---------|-----------|
+| **HOW_TO_ACCESS.md** | 🔗 Find your links | 3 min |
 | **PROJECT_SUMMARY.md** | Complete overview | 5 min |
 | **README.md** | Quick intro | 3 min |
 | **DEPLOYMENT.md** | Setup & customize | 10 min |
@@ -110,9 +126,10 @@ After opening in browser, you'll see:
 
 **Recommended Order:**
 1. This file (you're reading it!)
-2. PROJECT_SUMMARY.md
-3. DEPLOYMENT.md (if customizing)
-4. API_INTEGRATION.md (if adding real data)
+2. **HOW_TO_ACCESS.md** (if you need your link)
+3. PROJECT_SUMMARY.md
+4. DEPLOYMENT.md (if customizing)
+5. API_INTEGRATION.md (if adding real data)
 
 ---
 

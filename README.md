@@ -2,6 +2,21 @@
 
 A professional e-commerce homepage clone built with vanilla HTML, CSS, and JavaScript featuring a Swiper.js carousel with autoplay, fade transitions, and responsive design.
 
+## 🔗 Where to Find Your Link?
+
+**Looking for your website URL?** See **[HOW_TO_ACCESS.md](HOW_TO_ACCESS.md)** for:
+- 🖥️ **Local testing link** (localhost)
+- 📦 **GitHub repository link**
+- 🌐 **Deployed website links** (GitHub Pages, Vercel, Netlify)
+- 📱 **How to share your site** with others
+
+**Quick Links:**
+- Local: `http://localhost:8000` (after running server)
+- GitHub Repo: `https://github.com/IloveChanel/wholesale_wine`
+- Live Site: Deploy first (see HOW_TO_ACCESS.md)
+
+---
+
 ## 🎯 Features
 
 ✅ **Swiper.js Carousel** (v11+)
