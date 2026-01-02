@@ -3,388 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trendsetter Wholesale Wine - Premium Wine Selection</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="styles.css?v=20260102.3">
+    <title>Wholesale Wine</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header: Logo left, nav center, cart/search right -->
-    <header class="header">
-        <div class="container header-content">
-            <a href="/" class="logo">Wholesale Wine</a>
-            <nav class="nav-menu">
-                <a href="#" class="nav-link">Wine</a>
-                <a href="#" class="nav-link">Spirits</a>
-                <a href="#" class="nav-link">Cigars</a>
-                <a href="signup.html" class="nav-link">Sign Up</a>
-                <a href="blog.html" class="nav-link">Blog</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </nav>
-            <div class="search-cart">
-                <input type="text" placeholder="Search wines..." class="search-input">
-                <button class="cart-btn">🛒 My Cart</button>
-            </div>
-        </div>
-
+    <header>
+        <nav>
+            <div class="logo">Wholesale Wine</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Hero Carousel with Grid Area -->
-    <section style="grid-area: hero;">
-        <div class="swiper hero-swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="images/hero_1.png" alt="Wine Specials">
-                    <div class="hero-overlay">
-                        <h1>From Our Cellar to Your Door—Shipping Coast to Coast</h1>
-                        <p>Curated Selection of Fine Wines</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/hero_2.png" alt="Red Wine Sale">
-                    <div class="hero-overlay">
-                        <h1>National Reach. Boutique Service. Doorstep Delivery</h1>
-                        <p>Premium Selections Up to 40% Off</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/hero_4.png" alt="Craft Spirits">
-                    <div class="hero-overlay">
-                        <h1>The World's Finest Spirits Now Shipping to Your State</h1>
-                        <p>Rare Whiskeys & Premium Vodkas</p>
-                    </div>
+    <section id="home" class="hero">
+        <div class="carousel">
+            <div class="carousel-item active">
+                <img src="images/hero_1.png" alt="Wine Collection">
+                <div class="hero-overlay">
+                    <h1>Premium Wine Selection</h1>
+                    <p>Discover our extensive collection of fine wines</p>
+                    <a href="#products" class="cta-button">Explore Now</a>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="carousel-item">
+                <img src="images/hero_2.png" alt="Wine Cellar">
+                <div class="hero-overlay">
+                    <h1>Quality Guaranteed</h1>
+                    <p>Direct from renowned vineyards worldwide</p>
+                    <a href="#products" class="cta-button">Learn More</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/hero_3.png" alt="Wine Tasting">
+                <div class="hero-overlay">
+                    <h1>Wholesale Pricing</h1>
+                    <p>Best rates for bulk orders</p>
+                    <a href="#contact" class="cta-button">Get Quote</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/hero_4.png" alt="Wine Excellence">
+            </div>
         </div>
+        <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
     </section>
 
-    <!-- Wine Selection - Auto Carousel -->
-    <!-- Wine Selection - Swiper Carousel with Wrapper -->
-    <section class="featured-carousel">
-        <div class="container">
-            <div class="carousel-wrapper">
-                <button class="carousel-nav carousel-nav-prev wine-prev">❮</button>
-                <div class="carousel-center">
-                    <h3>Wine Selection</h3>
-                    <div class="swiper wine-swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide featured-item">
-                                <div class="product-image-carousel"><img src="images/wine_bottle.png" alt="Sauvignon Blanc"></div>
-                                <h4>Sauvignon Blanc</h4><p class="featured-price">$18.99</p>
-                            </div>
-                            <div class="swiper-slide featured-item">
-                                <div class="product-image-carousel"><img src="images/wine_bottle.png" alt="Pinot Grigio"></div>
-                                <h4>Pinot Grigio</h4><p class="featured-price">$19.99</p>
-                            </div>
-                            <div class="swiper-slide featured-item">
-                                <div class="product-image-carousel"><img src="images/wine_bottle.png" alt="Chardonnay"></div>
-                                <h4>Chardonnay</h4><p class="featured-price">$17.99</p>
-                            </div>
-                            <div class="swiper-slide featured-item">
-                                <div class="product-image-carousel"><img src="images/wine_bottle.png" alt="Riesling"></div>
-                                <h4>Riesling</h4><p class="featured-price">$20.99</p>
-                            </div>
-                            <div class="swiper-slide featured-item">
-                                <div class="product-image-carousel"><img src="images/wine_bottle.png" alt="Pinot Noir"></div>
-                                <h4>Pinot Noir</h4><p class="featured-price">$24.99</p>
-                            </div>
-                            <div class="swiper-slide featured-item">
-                                <div class="product-image-carousel"><img src="images/wine_bottle.png" alt="Cabernet Sauvignon"></div>
-                                <h4>Cabernet Sauvignon</h4><p class="featured-price">$22.99</p>
-                            </div>
-                            <div class="swiper-slide featured-item">
-                                <div class="product-image-carousel"><img src="images/wine_bottle.png" alt="Cabernet Merlot Blend"></div>
-                                <h4>Red Blend</h4><p class="featured-price">$21.99</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-nav carousel-nav-next wine-next">❯</button>
+    <section id="products" class="products">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="images/red-wine.jpg" alt="Red Wine">
+                <h3>Red Wine</h3>
+                <p>Premium selection of red wines from around the world</p>
+            </div>
+            <div class="product-card">
+                <img src="images/white-wine.jpg" alt="White Wine">
+                <h3>White Wine</h3>
+                <p>Crisp and refreshing white wine varieties</p>
+            </div>
+            <div class="product-card">
+                <img src="images/rose-wine.jpg" alt="Rosé Wine">
+                <h3>Rosé Wine</h3>
+                <p>Elegant rosé wines perfect for any occasion</p>
+            </div>
+            <div class="product-card">
+                <img src="images/sparkling-wine.jpg" alt="Sparkling Wine">
+                <h3>Sparkling Wine</h3>
+                <p>Celebrate with our finest sparkling selections</p>
             </div>
         </div>
     </section>
 
-    <!-- Top Picks - Swiper Carousel with Wrapper -->
-    <section class="featured-carousel">
-        <div class="container">
-            <div class="carousel-wrapper">
-                <button class="carousel-nav carousel-nav-prev toppicks-prev">❮</button>
-                <div class="carousel-center">
-                    <h3>Top Picks</h3>
-                    <div class="swiper toppicks-swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide featured-item">
-                                <div class="product-image-carousel"><img src="images/wine_bottle.png" alt="94+ Pointers"></div>
-                                <h4>94+ Pointers</h4><p class="featured-price">$16.99</p>
-                            </div>
-                            <div class="swiper-slide featured-item">
-                                <div class="product-image-carousel"><img src="images/wine_bottle.png" alt="Wine Under $20"></div>
-                                <h4>Wine Under $20</h4><p class="featured-price">$18.99</p>
-                            </div>
-                            <div class="swiper-slide featured-item">
-                                <div class="product-image-carousel"><img src="images/wine_bottle.png" alt="Wine Under $25"></div>
-                                <h4>Wine Under $25</h4><p class="featured-price">$19.99</p>
-                            </div>
-                            <div class="swiper-slide featured-item">
-                                <div class="product-image-carousel"><img src="images/wine_bottle.png" alt="Managers Picks"></div>
-                                <h4>Managers Picks</h4><p class="featured-price">$21.99</p>
-                            </div>
-                            <div class="swiper-slide featured-item">
-                                <div class="product-image-carousel"><img src="images/wine_bottle.png" alt="Best Value"></div>
-                                <h4>Best Value</h4><p class="featured-price">$17.99</p>
-                            </div>
-                            <div class="swiper-slide featured-item">
-                                <div class="product-image-carousel"><img src="images/wine_bottle.png" alt="Editors Choice"></div>
-                                <h4>Editors Choice</h4><p class="featured-price">$19.99</p>
-                            </div>
-                            <div class="swiper-slide featured-item">
-                                <div class="product-image-carousel"><img src="images/wine_bottle.png" alt="Cellar Worthy"></div>
-                                <h4>Cellar Worthy</h4><p class="featured-price">$18.99</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-nav carousel-nav-next toppicks-next">❯</button>
-            </div>
-        </div>
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We are a leading wholesale wine distributor with over 20 years of experience in the industry. Our commitment to quality and customer satisfaction has made us a trusted partner for businesses worldwide.</p>
     </section>
 
-    <!-- Skinny Banner: Rush CTA -->
-    <section class="rush-banner">
-        <div class="rush-content">
-            <div class="rush-text-group">
-                <span class="rush-label">IN A HURRY?</span>
-                <span class="rush-info">Priority Local Delivery</span>
-            </div>
-            <div class="rush-divider"></div>
-            <div class="rush-text-group">
-                <span class="rush-label">NATIONWIDE DISPATCH</span>
-                <span class="rush-info">Available!</span>
-            </div>
-            <a href="#" class="rush-btn">Check Availability</a>
-        </div>
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
-    <!-- Spirits - Swiper Carousel with Wrapper -->
-    <section class="featured-carousel">
-        <div class="container">
-            <div class="carousel-wrapper">
-                <button class="carousel-nav carousel-nav-prev spirits-prev">❮</button>
-                <div class="carousel-center">
-                    <h3>Spirits</h3>
-                    <div class="swiper spirits-swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide featured-item">
-                                <div class="product-image-carousel"><img src="images/liquor.png" alt="Looker Pink Sparkle"></div>
-                                <h4>Tequila</h4><p class="featured-price">$24.99</p>
-                            </div>
-                            <div class="swiper-slide featured-item">
-                                <div class="product-image-carousel"><img src="images/liquor.png" alt="Looker Pink Glow"></div>
-                                <h4>Vodka</h4><p class="featured-price">$22.99</p>
-                            </div>
-                            <div class="swiper-slide featured-item">
-                                <div class="product-image-carousel"><img src="images/liquor.png" alt="Looker Pink Premium"></div>
-                                <h4>Whiskey</h4><p class="featured-price">$28.99</p>
-                            </div>
-                            <div class="swiper-slide featured-item">
-                                <div class="product-image-carousel"><img src="images/liquor.png" alt="Looker Pink Passion"></div>
-                                <h4>Rum</h4><p class="featured-price">$26.99</p>
-                            </div>
-                            <div class="swiper-slide featured-item">
-                                <div class="product-image-carousel"><img src="images/liquor.png" alt="Looker Pink Sweet"></div>
-                                <h4>Cognac</h4><p class="featured-price">$20.99</p>
-                            </div>
-                            <div class="swiper-slide featured-item">
-                                <div class="product-image-carousel"><img src="images/liquor.png" alt="Looker Pink Bold"></div>
-                                <h4>Scotch</h4><p class="featured-price">$25.99</p>
-                            </div>
-                            <div class="swiper-slide featured-item">
-                                <div class="product-image-carousel"><img src="images/liquor.png" alt="Looker Pink Smooth"></div>
-                                <h4>New Products</h4><p class="featured-price">$23.99</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-nav carousel-nav-next spirits-next">❯</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Specials: Product Carousel -->
-    <section class="featured-carousel featured-specials-carousel">
-        <div class="container">
-            <div class="carousel-wrapper">
-                <button class="carousel-nav carousel-nav-prev carousel-prev">❮</button>
-                <div class="carousel-center">
-                    <h3>Featured Specials</h3>
-                    <div class="swiper featured-swiper-carousel">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="featured-product-box">
-                                    <div class="box-image">
-                                        <img src="images/liquor.png" alt="Looker Pink Signature">
-                                    </div>
-                                    <div class="box-content">
-                                        <h4>Signature</h4>
-                                        <p class="featured-price">$19.99</p>
-                                    </div>
-                                    <button class="box-content-btn">
-                                        <span class="add-to-cart">Add to Cart</span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="featured-product-box">
-                                    <div class="box-image">
-                                        <img src="images/liquor.png" alt="Looker Pink Elegance">
-                                    </div>
-                                    <div class="box-content">
-                                        <h4>Elegance</h4>
-                                        <p class="featured-price">$22.99</p>
-                                    </div>
-                                    <button class="box-content-btn">
-                                        <span class="add-to-cart">Add to Cart</span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="featured-product-box">
-                                    <div class="box-image">
-                                        <img src="images/liquor.png" alt="Looker Pink Luxe">
-                                    </div>
-                                    <div class="box-content">
-                                        <h4>Luxe</h4>
-                                        <p class="featured-price">$24.99</p>
-                                    </div>
-                                    <button class="box-content-btn">
-                                        <span class="add-to-cart">Add to Cart</span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="featured-product-box">
-                                    <div class="box-image">
-                                        <img src="images/liquor.png" alt="Looker Pink Original">
-                                    </div>
-                                    <div class="box-content">
-                                        <h4>Original</h4>
-                                        <p class="featured-price">$18.99</p>
-                                    </div>
-                                    <button class="box-content-btn">
-                                        <span class="add-to-cart">Add to Cart</span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="featured-product-box">
-                                    <div class="box-image">
-                                        <img src="images/liquor.png" alt="Looker Pink Premium">
-                                    </div>
-                                    <div class="box-content">
-                                        <h4>Premium</h4>
-                                        <p class="featured-price">$26.99</p>
-                                    </div>
-                                    <button class="box-content-btn">
-                                        <span class="add-to-cart">Add to Cart</span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="featured-product-box">
-                                    <div class="box-image">
-                                        <img src="images/liquor.png" alt="Looker Pink Sunset">
-                                    </div>
-                                    <div class="box-content">
-                                        <h4>Sunset</h4>
-                                        <p class="featured-price">$21.99</p>
-                                    </div>
-                                    <button class="box-content-btn">
-                                        <span class="add-to-cart">Add to Cart</span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="featured-product-box">
-                                    <div class="box-image">
-                                        <img src="images/liquor.png" alt="Looker Pink Blush">
-                                    </div>
-                                    <div class="box-content">
-                                        <h4>Blush</h4>
-                                        <p class="featured-price">$20.99</p>
-                                    </div>
-                                    <button class="box-content-btn">
-                                        <span class="add-to-cart">Add to Cart</span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="featured-product-box">
-                                    <div class="box-image">
-                                        <img src="images/liquor.png" alt="Looker Pink Royale">
-                                    </div>
-                                    <div class="box-content">
-                                        <h4>Royale</h4>
-                                        <p class="featured-price">$27.99</p>
-                                    </div>
-                                    <button class="box-content-btn">
-                                        <span class="add-to-cart">Add to Cart</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-nav carousel-nav-next carousel-next">❯</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-section">
-                <h4>About Us</h4>
-                <ul>
-                    <li><a href="#">Our Story</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Press</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Customer Service</h4>
-                <ul>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Shipping Info</a></li>
-                    <li><a href="#">Returns</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Cookie Policy</a></li>
-                </ul>
-            </div>
-            <div class="footer-section newsletter">
-                <h4>Newsletter</h4>
-                <p>Subscribe for exclusive deals</p>
-                <input type="email" placeholder="Your email" class="newsletter-input">
-                <button class="newsletter-btn">Subscribe</button>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 All rights reserved Michelle Vance. | Age Gate: Must be 21+ to purchase</p>
-        </div>
+    <footer>
+        <p>&copy; 2024 Wholesale Wine. All rights reserved.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
