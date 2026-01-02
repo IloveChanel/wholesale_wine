@@ -9,18 +9,15 @@
 
 html { scroll-behavior: smooth; }
 
+html, body { 
+    width: 100%; 
+    height: 100%; 
+}
+
 body {
     font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: radial-gradient(circle at center, #FFF9E6 0%, #E8D4B8 50%, #C9A876 100%);
-    min-height: 100vh;
-}
-html, body { width: 100%; height: 100%; }
-body { 
-    font-family: 'Source Sans Pro', sans-serif; 
-    line-height: 1.6; 
-    color: #2a2a2a; 
+    color: #2a2a2a;
     background: radial-gradient(circle at center, #FFF9E6 0%, #E8D4B8 50%, #C9A876 100%);
     background-attachment: fixed;
     min-height: 100vh;
@@ -129,9 +126,17 @@ section[style*="grid-area: hero"] { margin-top: 70px; }
 }
 
 .hero-overlay h1 {
-    font-size: 4rem; margin-bottom: 15px; text-shadow: 4px 4px 12px rgba(0,0,0,0.9);
-    font-family: 'Playfair Display', serif; font-weight: 700; color: #E6C76F;
-    letter-spacing: 2px; line-height: 1.4; max-width: 55%; word-spacing: 0.1em; white-space: normal;
+    font-size: 4rem;
+    margin-bottom: 15px;
+    text-shadow: 4px 4px 12px rgba(0,0,0,0.9);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #E6C76F;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    max-width: 60%;
+    word-break: break-word;
+    hyphens: auto;
 }
 
 .hero-overlay p {
