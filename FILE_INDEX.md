@@ -83,6 +83,15 @@ Project metadata and dependencies.
 
 ## 📚 Documentation Files
 
+### **HOW_TO_ACCESS.md** 🔗 NEW!
+Complete guide for finding your website links.
+- Local development URLs (localhost)
+- GitHub repository link
+- Deployed website links (GitHub Pages, Vercel, Netlify)
+- How to share your site
+- Custom domain setup
+- Troubleshooting link access
+
 ### **README.md**
 Quick overview and getting started guide.
 - Project features
@@ -134,6 +143,15 @@ Complete testing checklist.
 - API integration testing
 - SEO checklist
 - Deployment readiness checklist
+
+### **START_HERE.md**
+Primary entry point with complete overview.
+- Project status
+- Feature highlights
+- How to run (multiple methods)
+- Documentation guide
+- Quick customization tips
+- Deployment instructions
 
 ---
 
@@ -215,7 +233,7 @@ Spirits carousel slide - Blue gradient background with gold accents
 | **Product Cards** | 8 (mock data) |
 | **Category Cards** | 6 |
 | **Carousel Slides** | 3 |
-| **Documentation Pages** | 7 files |
+| **Documentation Pages** | 8 files |
 | **Total Project Size** | ~40KB (uncompressed) |
 | **Dependencies** | 2 (via CDN) |
 | **Browser Support** | 4+ modern browsers |
@@ -321,7 +339,8 @@ styles.css
 
 | Need | File |
 |------|------|
-| Start quickly | PROJECT_SUMMARY.md |
+| **Find my link** | **HOW_TO_ACCESS.md** 🔗 |
+| Start quickly | PROJECT_SUMMARY.md or START_HERE.md |
 | Run project | QUICKSTART.bat or QUICKSTART.sh |
 | Setup steps | DEPLOYMENT.md |
 | API help | API_INTEGRATION.md |
