@@ -667,12 +667,6 @@ section[style*="grid-area: hero"] { margin-top: 70px; }
 }
 
 /* ===== SIGNUP PAGE STYLING ===== */
-/* Warm luxury background applied to signup page */
-body {
-  background: radial-gradient(circle at center, #FFF9E6 0%, #E8D4B8 50%, #C9A876 100%);
-  min-height: 100vh;
-}
-
 .signup-hero {
   margin-top: 70px; padding: 60px 20px; text-align: center;
   background: linear-gradient(135deg, rgba(74,14,14,0.08) 0%, rgba(181,137,33,0.05) 100%);
