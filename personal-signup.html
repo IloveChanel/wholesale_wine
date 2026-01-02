@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Sign Up - Woods Wholesale Wine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header: Logo left, nav center, cart/search right -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="/" class="logo">Woods Wholesale Wine</a>
+            <nav class="nav-menu">
+                <a href="#" class="nav-link">Wine</a>
+                <a href="#" class="nav-link">Beer & Seltzers</a>
+                <a href="#" class="nav-link">Spirits</a>
+                <a href="signup.html" class="nav-link">Sign Up</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="search-cart">
+                <input type="text" placeholder="Search wines..." class="search-input">
+                <button class="cart-btn">🛒 My Cart</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Personal Signup Hero -->
+    <section class="personal-signup-hero">
+        <div class="container">
+            <h1>Create Your Personal Account</h1>
+            <p>Join thousands of wine enthusiasts who enjoy exclusive deals and personalized recommendations</p>
+        </div>
+    </section>
+
+    <!-- Personal Signup Form Section -->
+    <section class="personal-signup-section">
+        <div class="container">
+            <form class="personal-form" onsubmit="handlePersonalSignup(event)">
+                <div class="form-group">
+                    <label for="firstname">First Name *</label>
+                    <input type="text" id="firstname" name="firstname" placeholder="John" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastname">Last Name *</label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Smith" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" placeholder="Enter a strong password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmpassword">Confirm Password *</label>
+                    <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirm your password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890">
+                </div>
+
+                <div class="form-group">
+                    <label for="birthdate">Date of Birth (Must be 21+) *</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="zipcode">Zip Code</label>
+                    <input type="text" id="zipcode" name="zipcode" placeholder="12345">
+                </div>
+
+                <div class="form-group">
+                    <label for="interests">Wine Interests</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox">
+                            <input type="checkbox" name="interests" value="Red Wine">
+                            <span>Red Wine</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="interests" value="White Wine">
+                            <span>White Wine</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="interests" value="Rosé">
+                            <span>Rosé</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="interests" value="Spirits">
+                            <span>Spirits</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="interests" value="Beer">
+                            <span>Beer</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="interests" value="Champagne">
+                            <span>Champagne</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group checkbox">
+                    <label>
+                        <input type="checkbox" name="newsletter" checked>
+                        <span>Subscribe to our newsletter for exclusive deals and wine recommendations</span>
+                    </label>
+                </div>
+
+                <div class="form-group checkbox">
+                    <label>
+                        <input type="checkbox" name="terms" required>
+                        <span>I agree to the Terms of Service and Privacy Policy, and confirm I am 21+ years old *</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="personal-signup-btn">Create Account</button>
+
+                <p class="login-link">Already have an account? <a href="#">Log in here</a></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Why Join Section -->
+    <section class="why-join">
+        <div class="container">
+            <h2>What You Get</h2>
+            <div class="join-features">
+                <div class="feature">
+                    <h3>🎯 Personalized Recommendations</h3>
+                    <p>Get wine suggestions based on your taste preferences and past purchases</p>
+                </div>
+                <div class="feature">
+                    <h3>🎉 Member-Only Deals</h3>
+                    <p>Exclusive discounts and early access to our latest products</p>
+                </div>
+                <div class="feature">
+                    <h3>📦 Order Tracking</h3>
+                    <p>Track your orders in real-time and manage your purchase history</p>
+                </div>
+                <div class="feature">
+                    <h3>👥 Wine Club Access</h3>
+                    <p>Join our wine clubs for curated monthly selections</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Woods Wholesale Wine. All rights reserved. Must be 21+ to purchase.</p>
+        </div>
+    </footer>
+
+    <script>
+        function handlePersonalSignup(event) {
+            event.preventDefault();
+            
+            // Validate passwords match
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmpassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('Passwords do not match. Please try again.');
+                return;
+            }
+
+            // Validate age (21+)
+            const birthDate = new Date(document.getElementById('birthdate').value);
+            const today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const monthDiff = today.getMonth() - birthDate.getMonth();
+            
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            
+            if (age < 21) {
+                alert('You must be 21 or older to create an account.');
+                return;
+            }
+            
+            // Get form data
+            const formData = new FormData(document.querySelector('.personal-form'));
+            const interests = formData.getAll('interests');
+            const data = {
+                firstName: formData.get('firstname'),
+                lastName: formData.get('lastname'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                zipCode: formData.get('zipcode'),
+                interests: interests,
+                newsletter: formData.has('newsletter'),
+                timestamp: new Date().toISOString()
+            };
+
+            // Save to localStorage
+            let signups = JSON.parse(localStorage.getItem('personalSignups') || '[]');
+            signups.push(data);
+            localStorage.setItem('personalSignups', JSON.stringify(signups));
+
+            // Show success message
+            alert('Welcome to Woods Wholesale Wine! Your account has been created successfully.');
+            document.querySelector('.personal-form').reset();
+            
+            // Redirect after a short delay
+            setTimeout(() => {
+                window.location.href = '/';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate & Events - Woods Wholesale Wine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header: Logo left, nav center, cart/search right -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="/" class="logo">Woods Wholesale Wine</a>
+            <nav class="nav-menu">
+                <a href="#" class="nav-link">Wine</a>
+                <a href="#" class="nav-link">Beer & Seltzers</a>
+                <a href="#" class="nav-link">Spirits</a>
+                <a href="signup.html" class="nav-link">Sign Up</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="search-cart">
+                <input type="text" placeholder="Search wines..." class="search-input">
+                <button class="cart-btn">🛒 My Cart</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Corporate Hero Section -->
+    <section class="corporate-hero">
+        <div class="container">
+            <h1>Corporate & Events Solutions</h1>
+            <p>Premium wine and spirits for your corporate events, celebrations, and business functions</p>
+        </div>
+    </section>
+
+    <!-- Corporate Benefits Section -->
+    <section class="corporate-benefits">
+        <div class="container">
+            <h2>Why Choose Woods Wholesale Wine?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🍷</div>
+                    <h3>Bulk Pricing</h3>
+                    <p>Exclusive wholesale rates for corporate orders of any size. Save up to 30% on premium selections.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Personalized Service</h3>
+                    <p>Dedicated account managers to help curate the perfect wine selection for your event or office.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚚</div>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick turnaround on bulk orders with flexible delivery schedules to fit your timeline.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💼</div>
+                    <h3>Custom Solutions</h3>
+                    <p>Tailored wine programs for offices, events, tastings, and corporate gifting needs.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏆</div>
+                    <h3>Expert Recommendations</h3>
+                    <p>Our sommeliers provide guidance on wine pairings and selections for your specific event.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <h3>Easy Management</h3>
+                    <p>Online ordering portal, invoice management, and account tracking for seamless operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="corporate-services">
+        <div class="container">
+            <h2>Our Corporate Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Corporate Gifting</h3>
+                    <p>Impress clients and employees with premium wine selections. Custom packaging and personalized notes available.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Event Catering</h3>
+                    <p>Complete wine solutions for conferences, galas, weddings, and private events. We handle inventory and service recommendations.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Wine Tastings</h3>
+                    <p>Host memorable wine tasting events with expert-led guidance. Perfect for team building and client entertainment.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Office Wine Programs</h3>
+                    <p>Regular wine deliveries and curated selections for your corporate office. Keep your team and guests happy.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Custom Selections</h3>
+                    <p>Our experts will work with you to create the perfect wine selection for your specific budget and preferences.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Volume Discounts</h3>
+                    <p>Competitive pricing on large orders. The more you buy, the more you save with our tiered discount structure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signup Form Section -->
+    <section class="corporate-signup">
+        <div class="container">
+            <h2>Sign Up for Corporate & Events Program</h2>
+            <p class="signup-intro">Get started with exclusive pricing and personalized service. Fill out the form below and we'll be in touch within 24 hours.</p>
+            
+            <form class="corporate-form" onsubmit="handleCorporateSignup(event)">
+                <div class="form-group">
+                    <label for="company">Company Name *</label>
+                    <input type="text" id="company" name="company" placeholder="Enter your company name" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstname">First Name *</label>
+                        <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name *</label>
+                        <input type="text" id="lastname" name="lastname" placeholder="Last Name" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="you@company.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="industry">Industry *</label>
+                    <select id="industry" name="industry" required>
+                        <option value="">Select an industry</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Healthcare">Healthcare</option>
+                        <option value="Real Estate">Real Estate</option>
+                        <option value="Hospitality">Hospitality</option>
+                        <option value="Retail">Retail</option>
+                        <option value="Legal">Legal</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="interest">What are you interested in? *</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox">
+                            <input type="checkbox" name="interest" value="Corporate Gifting">
+                            <span>Corporate Gifting</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="interest" value="Event Catering">
+                            <span>Event Catering</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="interest" value="Wine Tastings">
+                            <span>Wine Tastings</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="interest" value="Office Program">
+                            <span>Office Wine Program</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="interest" value="Bulk Orders">
+                            <span>Bulk Orders</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventdate">Estimated Event Date</label>
+                    <input type="date" id="eventdate" name="eventdate">
+                </div>
+
+                <div class="form-group">
+                    <label for="budget">Estimated Budget (Optional)</label>
+                    <input type="number" id="budget" name="budget" placeholder="$" min="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Tell us about your needs</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Share details about your event or corporate needs..."></textarea>
+                </div>
+
+                <div class="form-group checkbox">
+                    <label>
+                        <input type="checkbox" name="terms" required>
+                        <span>I agree to receive promotional emails and communications about Woods Wholesale Wine corporate programs</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="signup-btn">Sign Up Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Woods Wholesale Wine. All rights reserved. Must be 21+ to purchase.</p>
+        </div>
+    </footer>
+
+    <script>
+        function handleCorporateSignup(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(document.querySelector('.corporate-form'));
+            const data = {
+                company: formData.get('company'),
+                name: `${formData.get('firstname')} ${formData.get('lastname')}`,
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                industry: formData.get('industry'),
+                eventDate: formData.get('eventdate'),
+                budget: formData.get('budget'),
+                message: formData.get('message'),
+                timestamp: new Date().toISOString()
+            };
+
+            // Save to localStorage
+            let signups = JSON.parse(localStorage.getItem('corporateSignups') || '[]');
+            signups.push(data);
+            localStorage.setItem('corporateSignups', JSON.stringify(signups));
+
+            // Show success message
+            alert('Thank you for signing up! Our team will contact you within 24 hours.');
+            document.querySelector('.corporate-form').reset();
+        }
+    </script>
+</body>
+</html>
